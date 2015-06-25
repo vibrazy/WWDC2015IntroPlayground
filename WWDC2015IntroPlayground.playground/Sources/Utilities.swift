@@ -182,3 +182,25 @@ extension CABasicAnimation
         return animation
     }
 }
+
+// try and have a go at blending modes
+//https://github.com/rbreve/iOS-Image-Filters/blob/master/PhotoFilters/UIImage%2BFilters.m
+/*
+CIImage *inputImage = [[CIImage alloc] initWithImage:self];
+
+//try with different textures
+CIImage *bgCIImage = [[CIImage alloc] initWithImage:[UIImage imageNamed:imageName]];
+
+
+CIContext *context = [CIContext contextWithOptions:nil];
+
+CIFilter *filter= [CIFilter filterWithName:blendMode];
+
+
+// inputBackgroundImage most be the same size as the inputImage
+
+[filter setValue:inputImage forKey:@"inputBackgroundImage"];
+[filter setValue:bgCIImage forKey:@"inputImage"];
+
+return [self imageFromContext:context withFilter:filter];
+*/
